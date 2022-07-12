@@ -11,8 +11,8 @@ In this repository, we make use of Terraform code to deploy an OCI Block Volume 
 Now, you'll want a local copy of this repo. You can make that with the commands:
 
 ```
-  git clone https://github.com/oracle-devrel/terraform-oci-arch-spark.git
-  cd terraform-oci-arch-spark
+  git clone https://github.com/oracle-devrel/terraform-oci-arch-shared-volume.git
+  cd terraform-oci-arch-shared-volume
   ls
 ```
 

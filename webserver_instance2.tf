@@ -8,6 +8,14 @@ resource "oci_core_instance" "Webserver2" {
   shape = var.node_shape
   defined_tags = { "${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 
+  dynamic "shape_config" {
+    for_each = length(regexall("Flex", var.node_shape)) > 0 ? [1] : []
+    content {
+      memory_in_gbs = var.shape_flex_memory
+      ocpus         = var.shape_flex_ocpus
+    }
+  }
+
   source_details {
     source_type = "image"
     source_id   = lookup(data.oci_core_images.InstanceImageOCID.images[0], "id")

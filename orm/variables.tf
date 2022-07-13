@@ -10,6 +10,10 @@ variable "compartment_ocid" {}
 variable "private_key_oci" {}
 variable "public_key_oci" {}
 
+variable "release" {
+  default = "1.0"
+}
+
 variable "VCN-CIDR" {
   default = "10.0.0.0/16"
 }
@@ -33,14 +37,22 @@ variable "instance_os" {
 
 variable "node_shape" {
 description = "Instance shape to use for master instance. "
- default     = "VM.Standard.E2.1"
+ default     = "VM.Standard.E4.Flex"
 }
 
 variable "linux_os_version" {
   description = "Operating system version for all Linux instances"
-  default     = "7.9"
+  default     = "8"
 }
 
 variable "availability_domain_name" {
-  default     = ""
+  default = ""
+}
+
+variable "shape_flex_ocpus" {
+  default = 1
+}
+
+variable "shape_flex_memory" {
+  default = 10
 }

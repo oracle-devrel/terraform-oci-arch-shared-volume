@@ -104,7 +104,7 @@ resource "null_resource" "Webserver1_config_OCFS" {
                 timeout = "10m"
         }
   inline = ["echo '== 1. Installing OCFS2'",
-            "sudo yum install ocfs2-tools-devel ocfs2-tools -y",
+            "sudo dnf install ocfs2* -y",
 
             "echo '== 2. Adding cluster to o2cb'",
             "sudo o2cb add-cluster ociocfs2", 
@@ -160,7 +160,7 @@ resource "null_resource" "Webserver2_config_OCFS" {
                 timeout = "10m"
         }
   inline = ["echo '== 1. Installing OCFS2'",
-            "sudo yum install ocfs2-tools-devel ocfs2-tools -y",
+            "sudo dnf install ocfs2* -y",
 
             "echo '== 2. Adding cluster to o2cb'",
             "sudo o2cb add-cluster ociocfs2", 

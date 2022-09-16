@@ -42,7 +42,7 @@ description = "Instance shape to use for master instance. "
 
 variable "linux_os_version" {
   description = "Operating system version for all Linux instances"
-  default     = "8"
+  default     = "9"
 }
 
 variable "availability_domain_name" {

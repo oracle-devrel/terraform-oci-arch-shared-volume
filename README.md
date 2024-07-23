@@ -75,7 +75,7 @@ This project is open source.  Please submit your contributions by forking this r
 This Terraform code is adapted from a repository by Lukasz Feldman (https://github.com/lfeldman), who we would like to thank.
 
 ## License
-Copyright (c) 2022 Oracle and/or its affiliates.
+Copyright (c) 2024 Oracle and/or its affiliates.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
 
